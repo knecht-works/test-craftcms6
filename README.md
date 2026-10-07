@@ -27,7 +27,9 @@ Requires [DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-install
 ddev start                      # boot the containers
 ddev composer install           # install PHP dependencies
 cp .env.example .env            # then run `ddev artisan key:generate`
-ddev artisan craft:install      # create the database and admin user (applies the project config)
+ddev artisan craft:install      # create the database and admin user (applies the project config), or:
+ddev import-db --file=seed/db.sql.gz   # import the demo seed (admin / admin123)
+ddev artisan craft:up           # run pending migrations and project config changes
 ddev npm install
 ddev npm run dev                # start the Vite dev server, or `npm run build`
 ```
