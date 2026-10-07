@@ -1,0 +1,135 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  a682e542-8a11-450b-9a5e-f0edddf7bc97:
+    cardThumbAlignment: end
+    tabs:
+      - elementCondition: null
+        elements:
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            instructionsPosition: before
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\Entries\EntryTitleField
+            uid: 2a1db6f4-dbe1-4012-b9cd-3b6848ff686b
+            userCondition: null
+            warning: null
+            width: 100
+          - dateAdded: null
+            elementCondition: null
+            heading: Hero
+            type: CraftCms\Cms\FieldLayout\LayoutElements\Heading
+            uid: 2aa4d56b-b1c6-48a9-b853-643b59caabcb
+            userCondition: null
+          - dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a26b11c0-da8e-418d-8a51-fc5d4411134c # Plain Text
+            handle: headline
+            instructions: null
+            instructionsPosition: before
+            label: Headline
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: 391b8f8f-308d-4090-b42d-c700f95e63e5
+            userCondition: null
+            warning: null
+            width: 50
+          - dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7bfe9119-221f-4a6f-b450-86b1f81fb4cb # Asset
+            handle: null
+            instructions: null
+            instructionsPosition: before
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: 2b90f4d4-ffff-45d4-b352-8157b56cceb1
+            userCondition: null
+            warning: null
+            width: 50
+          - dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 76f4bb16-621b-47e6-a47b-b42a0741bdf4 # Richtext
+            handle: introText
+            instructions: null
+            instructionsPosition: before
+            label: 'Intro Text'
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: 0f2ccff6-e12e-4bf5-b550-f79c3698e43f
+            userCondition: null
+            warning: null
+            width: 50
+          - dateAdded: null
+            elementCondition: null
+            heading: Content
+            type: CraftCms\Cms\FieldLayout\LayoutElements\Heading
+            uid: cc582e20-ba12-4d16-b46c-e1e7e77617f8
+            userCondition: null
+          - dateAdded: null
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: e7a19cdd-1559-4d99-baf1-63812a369060 # Richtext Large
+            handle: content
+            instructions: null
+            instructionsPosition: before
+            label: Content
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\CustomField
+            uid: 4d5f9302-a0dc-48ab-b58d-e36ffd1c82df
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a0b44d4e-e743-4d49-8103-d61443d93084
+        userCondition: null
+    thumbFieldKey: null
+handle: default
+hasTitleField: true
+icon: null
+name: Default
+showExpiryDateField: true
+showPostDateField: true
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,0 +1,75 @@
+handle: richtextLarge
+instructions: null
+name: 'Richtext Large'
+searchable: false
+settings:
+  assetSelectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - CraftCms\Cms\Asset\Elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - forQuery
+        - false
+      -
+        - class
+        - CraftCms\Cms\Asset\Conditions\AssetCondition
+      -
+        - conditionRules
+        - __assoc__:
+            -
+              - operator
+              - and
+            -
+              - rules
+              -
+                - __assoc__:
+                    -
+                      - class
+                      - CraftCms\Cms\Asset\Conditions\ViewableConditionRule
+                    -
+                      - uid
+                      - 5fbdbea5-371d-4f42-9457-806c302d6a18
+                    -
+                      - value
+                      - true
+  availableVolumes: '*'
+  byteLimit: null
+  charLimit: null
+  encode: false
+  flavor: gfm
+  htmlSanitizer: null
+  initialRows: 8
+  inlineOnly: false
+  linkSettingsShowLabelField: false
+  linkSettingsTypes:
+    - entry
+    - url
+  placeholder: null
+  sanitizeHtml: true
+  showStats: false
+  showToolbar: true
+  showUnpermittedVolumes: false
+  toolbarButtons:
+    - bold
+    - italic
+    - strikethrough
+    - code
+    - h1
+    - h2
+    - h3
+    - quote
+    - unordered-list
+    - ordered-list
+    - check-list
+    - link
+    - asset
+    - preview
+    - guide
+  uploadVolume: null
+translationKeyFormat: null
+translationMethod: site
+type: CraftCms\Cms\Field\Markdown

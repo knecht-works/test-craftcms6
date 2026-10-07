@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ currentSite.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Craftcms 6 Test | Knecht</title>
+  <link rel="stylesheet" href="https://knecht.works/styleguide/kit.css">
+  <script src="https://knecht.works/styleguide/kit.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="robots" content="noindex,follow" />
+  {{ vite(['resources/css/app.css', 'resources/js/app.js']) }}
+</head>
+<body class="kit-body kit-light">
+  <main class="kit-container">
+    {% block main %}
+      {% block navigation %}
+        {#- The current entry plus its other-site versions, in site order -#}
+        {%- set siteEntries = [entry]|merge(entry.localized.all())|sort((a, b) => a.site.sortOrder <=> b.site.sortOrder) -%}
+
+        <div class="flex items-center justify-between">
+          <a href="{{ currentSite.baseUrl }}" class="flex items-center text-black!">
+            <img class="h-10" src="https://knecht.works/styleguide/assets/knecht-head.svg" alt="Knecht">
+            <span class="font-bold text-xl text-current">Knecht</span>
+          </a>
+          <nav class="flex gap-6 items-center font-bold">
+            {% for navEntry in craft.entries.all() %}
+              <a href="{{ navEntry.url }}" class="text-black!">
+                {{ navEntry.title }}
+              </a>
+            {% endfor %}
+            <a href="https://knecht.works" target="_blank" class="text-black!">
+              Knecht
+            </a>
+            <label for="language-switcher" class="sr-only">{{ 'Language'|t }}</label>
+            <select id="language-switcher" class="cursor-pointer" aria-label="{{ 'Language'|t }}" onchange="window.location.href = this.value">
+              {%- for siteEntry in siteEntries -%}
+                <option value="{{ siteEntry.url }}" {% if siteEntry.site.id == currentSite.id %}selected{% endif %}>{{ siteEntry.site.name }}</option>
+              {%- endfor -%}
+            </select>
+          </nav>
+        </div>
+      {% endblock navigation %}
+
+      {% block hero %}
+        {% set image = entry.asset.one() %}
+        <div class="mt-20">
+          <div class="text-center">
+            <span class="kit-badge kit-mb-4">craftcms6-test-e2e</span>
+
+            <h1>{{ entry.headline ?: entry.title }}</h1>
+
+            <div class="kit-muted mt-8">
+              {{ entry.introText }}
+            </div>
+          </div>
+          {% if image %}
+            <div class="mt-8">
+              <img class="rounded-lg overflow-hidden" src="{{ image.url }}" alt="{{ image.alt ?? image.title }}">
+            </div>
+          {% endif %}
+        </div>
+      {% endblock hero %}
+
+      {% block content %}
+        <div class="mt-20">
+          {{ entry.content }}
+        </div>
+      {% endblock content %}
+
+      {% block footer %}
+      {% endblock footer %}
+    {% endblock main %}
+  </main>
+</body>
+</html>

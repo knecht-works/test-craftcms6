@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL/gb
+enabled: '1'
+handle: gb
+hasUrls: true
+language: en-GB
+name: GB
+primary: false
+siteGroup: 68bcc1ae-e3c4-486f-8d76-e6db3fe1a93f # Knecht Works
+sortOrder: 3

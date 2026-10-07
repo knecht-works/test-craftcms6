@@ -1,0 +1,34 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - uid: 8a11481b-da87-47ae-9626-e572ab131c0e # Default
+handle: pages
+maxAuthors: 1
+minAuthors: 1
+name: Pages
+previewTargets:
+  - label: 'Primary entry page'
+    refresh: true
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  7480c632-a5a8-4f7c-9f8e-fc97c2b1365d: # EN
+    enabledByDefault: true
+    hasUrls: true
+    route: null
+    template: _entry.twig
+    uriFormat: '{slug}'
+  dee56a08-c55c-4108-a4af-fea2b06d9dd0: # DE
+    enabledByDefault: true
+    hasUrls: true
+    route: null
+    template: _entry.twig
+    uriFormat: '{slug}'
+  e2b05374-8ac3-4487-a137-e43cc30ddd9a: # GB
+    enabledByDefault: true
+    hasUrls: true
+    route: null
+    template: _entry.twig
+    uriFormat: '{slug}'
+type: channel
+workflow: null

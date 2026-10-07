@@ -1,0 +1,49 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+assetTransformer: null
+fieldLayouts:
+  61901fd3-e169-4772-9241-fe3451ba2020:
+    cardThumbAlignment: end
+    tabs:
+      - elementCondition: null
+        elements:
+          - autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            instructionsPosition: before
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: CraftCms\Cms\FieldLayout\LayoutElements\Assets\AssetTitleField
+            uid: 515acf27-9308-4456-9be5-67a43aa869d5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dedfe53e-33df-4be8-9e6b-211ce7708d01
+        userCondition: null
+    thumbFieldKey: null
+fs: assets
+handle: images
+hasUrls: true
+name: Images
+sortOrder: 1
+subpath: images
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
