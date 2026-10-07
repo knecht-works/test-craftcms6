@@ -11,6 +11,10 @@
   {{ vite(['resources/css/app.css', 'resources/js/app.js']) }}
 </head>
 <body class="kit-body kit-light">
+  <script>
+    {#- Apply the stored theme before first paint to avoid a flash -#}
+    try { if (localStorage.getItem('theme') === 'dark') document.body.classList.remove('kit-light') } catch (e) {}
+  </script>
   <main class="kit-container">
     {% block main %}
       {% block navigation %}
@@ -18,17 +22,17 @@
         {%- set siteEntries = [entry]|merge(entry.localized.all())|sort((a, b) => a.site.sortOrder <=> b.site.sortOrder) -%}
 
         <div class="flex items-center justify-between">
-          <a href="{{ currentSite.baseUrl }}" class="flex items-center text-black!">
+          <a href="{{ currentSite.baseUrl }}" class="flex items-center text-black! dark:text-white!">
             <img class="h-10" src="https://knecht.works/styleguide/assets/knecht-head.svg" alt="Knecht">
             <span class="font-bold text-xl text-current">Knecht</span>
           </a>
           <nav class="flex gap-6 items-center font-bold">
             {% for navEntry in craft.entries.all() %}
-              <a href="{{ navEntry.url }}" class="text-black!">
+              <a href="{{ navEntry.url }}" class="text-black! dark:text-white!">
                 {{ navEntry.title }}
               </a>
             {% endfor %}
-            <a href="https://knecht.works" target="_blank" class="text-black!">
+            <a href="https://knecht.works" target="_blank" class="text-black! dark:text-white!">
               Knecht
             </a>
             <label for="language-switcher" class="sr-only">{{ 'Language'|t }}</label>
@@ -37,6 +41,10 @@
                 <option value="{{ siteEntry.url }}" {% if siteEntry.site.id == currentSite.id %}selected{% endif %}>{{ siteEntry.site.name }}</option>
               {%- endfor -%}
             </select>
+            <button type="button" id="theme-toggle" class="cursor-pointer text-xl leading-none" aria-label="{{ 'Toggle dark mode'|t }}" aria-pressed="false" title="{{ 'Toggle dark mode'|t }}">
+              <span class="dark:hidden" aria-hidden="true">🌙</span>
+              <span class="hidden dark:inline" aria-hidden="true">☀️</span>
+            </button>
           </nav>
         </div>
       {% endblock navigation %}

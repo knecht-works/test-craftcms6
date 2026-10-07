@@ -1,3 +1,6 @@
 @import 'tailwindcss';
 
 @source '../views';
+
+/* Dark mode = body without the styleguide's kit-light class */
+@custom-variant dark (&:where(body:not(.kit-light) *));
