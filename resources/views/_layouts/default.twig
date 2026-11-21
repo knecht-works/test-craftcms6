@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Craftcms 6 Test | Knecht</title>
+  {#- kit.css pulls Geist in via @import, which only starts after kit.css has
+      loaded and makes the text flash in a fallback font. Load it in parallel. -#}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://knecht.works/styleguide/kit.css">
   <script src="https://knecht.works/styleguide/kit.js" defer></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
