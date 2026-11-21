@@ -1,7 +1,48 @@
-dateModified: 1791372361
+dateModified: 1795289299
+elementSources:
+  CraftCms\Cms\Entry\Elements\Entry:
+    - disabled: true
+      key: 'section:b2dc6ff6-cb1f-4eec-8be3-e974fb8b99be' # Home
+      page: Singles
+      type: native
+    - key: '*'
+      page: Entries
+      type: native
+    - condition:
+        class: CraftCms\Cms\Entry\Conditions\EntryCondition
+        conditionRules:
+          operator: and
+          rules:
+            - class: CraftCms\Cms\Entry\Conditions\SectionTypeConditionRule
+              operator: in
+              uid: 6f937d86-d871-4cbd-91ec-e70c4b85015b
+              values:
+                - single
+            - class: CraftCms\Cms\Entry\Conditions\ViewableConditionRule
+              uid: 78ac44d9-98ee-447f-99f0-657c101f0a40
+              value: true
+        elementType: CraftCms\Cms\Entry\Elements\Entry
+        fieldContext: global
+        forQuery: false
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:fb34ddfa-5a9f-41f3-a960-7622de6b0eae'
+      label: Singles
+      page: Entries
+      tableAttributes:
+        - status
+        - link
+      type: custom
+      userGroups: false
+    - heading: Channels
+      page: Entries
+      type: heading
+    - key: 'section:1a1f4c85-de86-4c34-9fb1-f6c0bba5304a' # Pages
+      page: Entries
+      type: native
 meta:
   __names__:
-    0f7dbd20-f39e-57db-8b25-dcadccdd1733: Craft # Craft
     1a1f4c85-de86-4c34-9fb1-f6c0bba5304a: Pages # Pages
     4b27d877-0924-47cc-8a6f-b2a591a7f796: 'Public Schema' # Public Schema
     7bfe9119-221f-4a6f-b450-86b1f81fb4cb: Asset # Asset
@@ -18,7 +59,7 @@ meta:
 system:
   edition: pro
   name: 'Knecht Works'
-  schemaVersion: 6.0.0.21
+  schemaVersion: 6.0.0.42
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
