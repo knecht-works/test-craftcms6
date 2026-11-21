@@ -43,6 +43,7 @@ fs: assets
 handle: images
 hasUrls: true
 name: Images
+propagationMethod: all
 sortOrder: 1
 subpath: images
 titleTranslationKeyFormat: null
